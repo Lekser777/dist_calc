@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <changeSet author="test" id="1">
+        <createTable tableName="City">
+            <column name="Id" type="int(11)">
+                <constraints primaryKey="true" nullable="false" unique="true"/>
+            </column>
+            <column name="Name" type="varchar(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Latitude" type="double">
+            </column>
+            <column name="Longitude" type="double">
+            </column>
+        </createTable>
+        <createTable tableName="Distance">
+            <column name="Id" type="int(11)">
+                <constraints primaryKey="true" nullable="false" unique="true"/>
+            </column>
+            <column name="From_city" type="varchar(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="To_city" type="varchar(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Distance" type="int(11)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="test" id="2">
+        <sql>INSERT INTO `city` (`Id`, `Name`, `Latitude`, `Longitude`) VALUES (1, "Samara", 53.12, 50.06);
+             INSERT INTO `city` (`Id`, `Name`, `Latitude`, `Longitude`) VALUES (2, "Moscow", 55.75, 37.61);
+             INSERT INTO `city` (`Id`, `Name`, `Latitude`, `Longitude`) VALUES (3, "Saint_petersburg", 59.57, 30.19);
+             INSERT INTO `distance-calculator`.`distance` (`Id`, `From_city`, `To_city`, `Distance`) VALUES (1, "Samara", "Moscow", 1051);
+             INSERT INTO `distance-calculator`.`distance` (`Id`, `From_city`, `To_city`, `Distance`) VALUES (1, "Samara", "Saint_petersburg", 1768);
+             INSERT INTO `distance-calculator`.`distance` (`Id`, `From_city`, `To_city`, `Distance`) VALUES (1, "Moscow", "Saint_petersburg", 705);
+        </sql>
+    </changeSet>
+</databaseChangeLog>

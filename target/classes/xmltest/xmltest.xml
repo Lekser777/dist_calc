@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cities>
+    <cityList>
+        <city>
+            <id>4</id>
+            <name>New-York</name>
+            <latitude>51.59</latitude>
+            <longitude>50.5</longitude>
+        </city>
+        <city>
+            <id>5</id>
+            <name>LA</name>
+            <latitude>51.59</latitude>
+            <longitude>50.5</longitude>
+        </city>
+    </cityList>
+</cities>

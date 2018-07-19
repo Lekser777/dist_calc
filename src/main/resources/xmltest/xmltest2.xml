@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<distances>
+    <distanceList>
+        <distance>
+            <id>10</id>
+            <fromCity>NY</fromCity>
+            <toCity>LA</toCity>
+            <distance>1000</distance>
+        </distance>
+        <distance>
+            <id>11</id>
+            <fromCity>NY</fromCity>
+            <toCity>Moscow</toCity>
+            <distance>1000</distance>
+        </distance>
+    </distanceList>
+</distances>
